@@ -4,9 +4,6 @@ from django.views.generic import TemplateView
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.contrib import messages
-'''from .summarize import summarize_text
-from .summarize import common
-from .summarize import commonppl'''
 from .summarize import *
 
 class HomePageView(TemplateView):
