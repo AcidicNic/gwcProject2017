@@ -1,0 +1,89 @@
+#pagewrap {
+    text-align: center;
+}#output {
+    border-color: black;
+    border: 1px;
+    border-radius: 0px;
+    background-color: #fff;
+    width: 80%;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+}body {
+    background: url("/static/background.jpg");
+    background-size: cover;
+}#title {
+    background-color: #000000;
+    color: white;
+    padding: 14px;
+    font-size: 40px;
+    width:100%;
+    cursor: pointer;
+    text-align: center;
+    z-index: auto;
+    margin-top: 10px;
+}#run {
+    background-color: #8CDCE5;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1%;
+    cursor: pointer;
+}#text {
+    border-color: : black;
+    margin: 1%;
+    border-radius: 0px;
+}#number {
+    border-color: : black;
+    margin: 1%;
+    border-radius: 0px;
+}
+
+
+
+
+/* Sidebar */
+#navButton{
+    font-size:30px;
+    cursor:pointer;
+    margin-left: 2px;
+}.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
