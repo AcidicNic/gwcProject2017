@@ -25,7 +25,7 @@ SECRET_KEY = 'b1=)bpe^l9by!gt+uhcrylm3m0+-6o*49_$28(i$^yo3fg)hcd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'main.wsgi.application'
+# WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
