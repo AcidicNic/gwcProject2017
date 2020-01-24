@@ -28,8 +28,8 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 SECRET_KEY = 'b1=)bpe^l9by!gt+uhcrylm3m0+-6o*49_$28(i$^yo3fg)hcd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
