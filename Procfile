@@ -1,2 +1,2 @@
+web: python -m spacy download en_core_web_sm
 web: gunicorn main.wsgi
-blah: python -m spacy download en_core_web_sm
