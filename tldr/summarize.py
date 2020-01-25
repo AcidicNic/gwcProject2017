@@ -1,8 +1,13 @@
 import spacy
 from collections import Counter, defaultdict
 from operator import itemgetter
+from os import system
 
-nlp = spacy.load('en_core_web_sm')
+try:
+    nlp = spacy.load('en_core_web_sm')
+except:
+    system('python -m spacy download en_core_web_sm')
+    nlp = spacy.load('en_core_web_sm')
 
 def summarize_text(text, lengthOfSummary):
 # Process `text` with Spacy NLP Parser
