@@ -2,7 +2,9 @@ import spacy
 from collections import Counter, defaultdict
 from operator import itemgetter
 
-nlp = spacy.load('en_core_web_sm')
+import en_core_web_sm
+nlp = en_core_web_sm.load()
+
 
 
 def summarize_text(text, lengthOfSummary):
