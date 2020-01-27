@@ -1,15 +1,15 @@
 import spacy
 from collections import Counter, defaultdict
 from operator import itemgetter
-from os import system
 
 nlp = spacy.load('en_core_web_sm')
 
+
 def summarize_text(text, lengthOfSummary):
-# Process `text` with Spacy NLP Parser
+    # Process `text` with Spacy NLP Parser
     doc = nlp(text)
 
-    #creates a keyList of top 10 keywords, parses documents into list of sentences
+    # creates a keyList of top 10 keywords, parses documents into list of sentences
     keywords = Counter()
     for chunk in doc.noun_chunks:
         if nlp.vocab[chunk.lemma_].prob < - 8: # probablity value -8 is arbitrarily selected threshold
@@ -18,9 +18,9 @@ def summarize_text(text, lengthOfSummary):
     sentences = [s for s in doc.sents]
     for sentence in sentences:
         print(sentence)
-    sentenceList = [] #a 2D array containing the index of each sentence and its score
+    sentenceList = [] # a 2D array containing the index of each sentence and its score
 
-    #assigining points to each sentence
+    # assigining points to each sentence
     for i in range(0,len(sentences)):
         actualSentence = sentences[i].lemma_ #breaks up current sentence in sentences into basic word forms
         sentPoint = 0 #always reset the points when looping through the sentences
@@ -32,7 +32,7 @@ def summarize_text(text, lengthOfSummary):
         eachSent = [i, sentPoint] #array containing the index of the currentSentence and its points
         sentenceList.append(eachSent) #add eachSent to the sentenceList
 
-    #sorting the sentences by point value and putting them in a list, sorting those by sentence index and adding it to a string
+    # sorting the sentences by point value and putting them in a list, sorting those by sentence index and adding it to a string
     sortedSentByPoints = sorted(sentenceList, key=itemgetter(1), reverse=True)
     justSentList = []
     for x in range(0,int(lengthOfSummary)):
